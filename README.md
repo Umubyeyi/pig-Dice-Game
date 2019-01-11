@@ -31,7 +31,7 @@ Clone to your computer using Terminal </br>
 |If Player rolls any number other than 1, roll is added to round total   | Roll = 5     |  Round Total =5    |
 |If Player1 rolls 1, no score is added and round for Player 2  |  Roll = 1    |  Round Total = 0, Score = 0,  Player2 plays    |
 |If Player1 clicks Hold, round total is added to his score and it's Player2 Turn | Click Hold     |  Round Total = 5, Score = 5, Player2 plays    |
-| When a player's total score is 50 or more, game is over and winner alert shows  |  Player 1 score = 51	    |  Newton WINS (SweetAlert)    |
+| When a player's total score is 50 or more, game is over and winner alert shows  |  Player 1 score = 51	    |  Dativa WINS (SweetAlert)    |
 
 
 ## Support and contact details
