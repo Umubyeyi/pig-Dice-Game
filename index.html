@@ -1,0 +1,153 @@
+<!--<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pig Dice</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <img src="http://www.unclesgames.com/images/products/00515_big.jpg" alt="pig dice" width="35%" />
+        <h1>Let's Play Pig Dice!!</h1>
+
+
+      <form id="pigForm" class="form-group" action="index.html" method="post">
+        <div class="player-group">
+          <label class="player-group">Enter Player1</label>
+          <input id="playerName1" type="text">
+        </div>
+        <div class="playersName">
+          <label class="player-group">Enter Player2</label>
+          <input id="playerName2" type="text">
+        </div>
+        <button class="player-group btn-success" name="button">Submit</button>
+      </form>
+    </div>
+
+      <br>
+      <div class="gameDisplay">
+        <div class="col-md-5" id="gameDisplayPlayer1">
+          <h1><span id="playerName1"></span>'s Score: <span class="gameStatusDisplay  player1Score">0</span></h1>
+          <div id="player1Button">
+          <h2>Player <span class="playerStatus" class="gameStatusDisplay"></span>'s Turn</h2>
+          <h2>Score for this Turn: <span id="turnScore" class="gameStatusDisplay turnScore"></span></h2>
+          <h2>Roll Result: <span id="rollResult" class="gameStatusDisplay rollResult"></span></h2>
+
+          <button type="button" class="btn btn-warning btn-lg rollPig">(Re)Roll for More Points!</button>
+          <button type="button" class="btn btn-primary btn-lg holdPig">Stop rolling and keep points...</button>
+          </div>
+        </div>
+
+
+        <div class="col-md-5 col-md-offset-2" id="gameDisplayPlayer2">
+          <h1><span id="playerName2"></span>'s Score: <span class="gameStatusDisplay player2Score">0</span></h1>
+          <div id="player2Button">
+          <h2>Player <span class="playerStatus"></span>'s Turn</h2>
+
+          <h2>Score for this Turn: <span id="turnScore" class="gameStatusDisplay turnScore"></span></h2>
+          <h2>Roll Result: <span id="rollResult" class="gameStatusDisplay rollResult"></span></h2>
+
+
+          <button type="button" class="btn btn-warning btn-lg rollPig">(Re)Roll for More Points!</button>
+          <button type="button" class="btn btn-primary btn-lg holdPig">Stop rolling and keep points...</button>
+        </div>
+
+      </div>
+
+
+
+      </div>
+    </div>
+  </body>
+</html>-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/script.js"></script>
+    <title>Pig Dice Game</title>
+  </head>
+  <body>
+
+    <body>
+      <div class="container">
+        <div class="jumbotron">
+          <p>Players throw a dice and scores as many points as the total shown on the dice providing the dice doesn’t roll a 1.</p> 
+         <p> The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn.</p>
+          <p> If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the die to the next player. </p>
+          <p> Play passes from player to player until a winner is determined. </p>
+           <p>The first player to accumulate 100 or more points wins the game.</p>
+
+          <h2>the <img src="images/dancing-pig.gif" alt="Dancing Pig">dice game</h2>
+          <p>welcome to the [pig dice game] </p>
+          
+        </div>
+        <div class="login">
+          <h6>Opponnents, enter your respective names</h6>
+          <form class="opponnents">
+            <div class="row">
+              <div class="col-md-3">
+ 
+              </div>
+               <div class="form-group col-md-3">
+                 <label for="player-one">Player One</label> <br>
+                 <input class="form-control" id="player-one" type="text" name="player-one" value="">
+               </div>
+               <div class="form-group col-md-3">
+                 <label for="player-two">Player Two</label> <br>
+                 <input class="form-control" id="player-two" type="text" name="player-one" value="">
+               </div>
+               <div class="col-md-3">
+ 
+               </div>
+               <button id="start" type="submit" name="button" class="btn bg-info">sTart!</button>
+            </div><!--End div row -->
+          </form>
+        </div>  <!--End login -->
+ 
+        <div class="pig-game">
+          <button id="restart" type="button" name="button" onclick="reload();" class="btn bg-info">reStart</button>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="player-name">
+                <p>pLayer One</p>
+                <p class="player-one-name"> <span><img class="one-turn check" src="images/turn.png" alt="My Turn"></span> </p>
+              </div>
+              <div class="player-score">
+                <p><span class="player-one-score">0</span> </p>
+              </div>
+            </div> <!--End div col player-one -->
+ 
+            <div class="col-md-4 dice-img">
+ 
+              <div class="round-total">
+                <p>Round Total: <span id="round-total"></span> </p>
+                <button id="roll" type="button" name="button" class="btn bg-success">Roll</button>
+                <button id="hold" type="button" name="button" class="btn bg-danger">Hold</button>
+              </div>
+            </div> <!--End div dice -->
+ 
+            <div class="col-md-4">
+              <div class="player-name">
+                <p>pLayer Two</p>
+                <p class="player-two-name"> <span><img class="two-turn check" src="images/turn.png" alt="My Turn"></span> </p>
+              </div>
+              <div class="player-score">
+                <p><span class="player-two-score">0</span> </p>
+              </div>
+            </div><!--End div col player-one -->
+          </div> <!--End div row -->
+ 
+        </div> <!--End div pig-game -->
+ 
+        <p class="copyright">Copyright© 2018 <span class="copyname">Umubyeyi Dinah</span> <img src="images/rolling-cat.gif" alt="rolling cat"> </p>
+      </div> <!--End div container -->
+     </body>
+   </html>
