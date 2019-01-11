@@ -29,3 +29,17 @@
       turnPlayer();
     }
   }
+   //function to change players turns
+   var turnPlayer = function(){
+    if (playerOne.status == "enabled") {
+      playerOne.status = "disabled";
+      playerTwo.status = "enabled";
+      $(".one-turn").hide();
+      $(".two-turn").show();
+    } else if (playerTwo.status == "enabled") {
+      playerOne.status = "enabled";
+      playerTwo.status = "disabled";
+      $(".two-turn").hide();
+      $(".one-turn").show();
+    }
+  }
