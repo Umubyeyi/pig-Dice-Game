@@ -65,4 +65,56 @@
       $("#hold").prop("disabled", true);
     }
   }
+  //User Interface
   
+  $(document).ready(function(){
+    $(".opponnents").submit(function(event){
+      event.preventDefault();
+      playerOneName = $("#player-one").val();
+      playerTwoName = $("#player-two").val();
+      playerTwo = new Player(playerTwoName, 0, "disabled");
+      playerOne = new Player(playerOneName, 0, "enabled");
+  
+      $(".login").hide();
+      $(".pig-game").show();
+      $(".player-one-name").prepend(playerOne.name);
+      $(".player-two-name").prepend(playerTwo.name);
+      $(".two-turn").hide();
+      $(".one-turn").show();
+  
+      $("#roll").click(function(){
+        roll();
+        $("#round-total").text(roundTotal);
+      }) // end roll click
+  
+      $("#hold").click(function(){
+        //must add commit remove img dice if click hold
+        $("#new-dice").remove();
+        if (playerOne.status == "enabled") {
+          playerOne.scorePlus();
+          $(".player-one-score").text(playerOne.score);
+          winner();
+          turnPlayer();
+        } else if (playerTwo.status == "enabled"){
+          playerTwo.scorePlus();
+          $(".player-two-score").text(playerTwo.score);
+          winner();
+          turnPlayer();
+        }
+        roundTotal = 0;
+        $("#round-total").text(roundTotal);
+      }) // end hold click
+    }) // end submit start
+  
+    $("#help").click(function(){
+      swal({
+        title: "How To Play!",
+        text: "Choose a player to go first. That player throws a die and scores as many points as the total shown on the die providing the die doesn’t roll a 1. The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn. If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the die to the next player. Play passes from player to player until a winner is determined. The first player to accumulate 100 or more points wins the game.",
+        button: "Got it!",
+      });
+    })
+  }) // end ready
+  
+  function reload() {
+    location.reload();
+  }
