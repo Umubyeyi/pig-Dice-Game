@@ -86,3 +86,22 @@
     justify-content: center;
     width: 400px;
   }
+  .copyname {
+    font-family: 'Satisfy', cursive;
+    font-weight: bold;
+  }
+  
+  p > img {
+    height: 30px;
+    width: 30px;
+  }
+  .container>p{
+    text-align:center
+  }
+  .jumbotron>h2{
+    color:blue
+  }
+  .jumbotron>p{
+    font-family: 'Times New Roman', Times, serif;
+  }
+  

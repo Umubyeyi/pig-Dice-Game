@@ -68,7 +68,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/ico" href="images/title-icon.png">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/script.js"></script>
@@ -78,16 +84,16 @@
 
     <body>
         <div class="container">
+            <p>The game has 2 players, playing in rounds</p>
+            <p>Players throw a dice and scores as many points as the total shown on the dice providing the dice doesn’t roll a 1.</p> 
+            <p> The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn.</p>
+             <p> If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the die to the next player. </p>
+             <p> Play passes from player to player until a winner is determined. </p>
+              <p>The first player to accumulate 50 or more points wins the game.</p>
             <div class="jumbotron">
-              <p>Players throw a dice and scores as many points as the total shown on the dice providing the dice doesn’t roll a 1.</p> 
-             <p> The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn.</p>
-              <p> If the player rolls a 1 his turn is over, he loses all points he accumulated that turn, and he passes the die to the next player. </p>
-              <p> Play passes from player to player until a winner is determined. </p>
-               <p>The first player to accumulate 100 or more points wins the game.</p>
-    
-              <h2>the <img src="images/dancing-pig.gif" alt="Dancing Pig">dice game</h2>
-              <p>welcome to the [pig dice game] </p>
-              
+              <h2>The <img src="images/dancing-pig.gif" alt="Dancing Pig">dice game</h2>
+                <p>welcome to the [pig dice game] </p>
+                <button id="help" class="btn bg-warning" type="button" name="button">? - Help</button>
             </div>
             <div class="login">
                 <h6>Opponnents, enter your respective names</h6>
@@ -147,7 +153,7 @@
        
               </div> <!--End div pig-game -->
        
-              <p class="copyright">Copyright© 2018 <span class="copyname">Umubyeyi Dinah</span> <img src="images/rolling-cat.gif" alt="rolling cat"> </p>
+              <p class="copyright">Copyright© 2019 <span class="copyname">Umubyeyi Dinah</span> <img src="images/rolling-cat.gif" alt="rolling cat"> </p>
             </div> <!--End div container -->
            </body>
          </html>
