@@ -5,4 +5,11 @@
     background-size: cover;
   }
   
-  
+  .container {
+    /* display: flex; */
+    justify-content: center;
+    /* background-image: url(../images/papyrus.png);
+    width: 667px;
+    height: 429px;
+    background-repeat: no-repeat;
+    background-size: cover; */
