@@ -36,3 +36,8 @@
     width: 400px;
     display: block;
   }
+  #player-one, #player-two {
+    width: 200px;
+    display: block;
+    margin:0 auto;
+  }
