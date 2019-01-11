@@ -45,3 +45,14 @@
     display: block;
     margin:0 auto;
   }
+  .pig-game {
+    display: none;
+  }
+  
+  .dice-img img {
+    margin-top: 20px;
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    border-radius: 15%;
+  }
