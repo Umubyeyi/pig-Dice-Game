@@ -43,3 +43,26 @@
       $(".one-turn").show();
     }
   }
+  // function Winner
+  var winner = function(){
+    if (playerOne.score >= 50){
+      $(".dice-img").text("!!!" + playerOne.name + "  WINS !!!")
+      swal({
+        title: "!!!" + playerOne.name + "  WINS !!!",
+        icon: "success",
+        button: "OK!",
+      });
+      $("#roll").prop("disabled", true);
+      $("#hold").prop("disabled", true);
+    } else if (playerTwo.score >= 50){
+      $(".dice-img").text("!!!" + playerTwo.name + "  WINS !!!")
+      swal({
+        title: "!!!" + playerTwo.name + "  WINS !!!",
+        icon: "success",
+        button: "OK!",
+      });
+      $("#roll").prop("disabled", true);
+      $("#hold").prop("disabled", true);
+    }
+  }
+  
