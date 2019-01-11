@@ -18,4 +18,11 @@
   h2>img {
     height: 100px;
     width: 100px;
-  } 
+  }
+  #help {
+    border-radius: 10px;
+    float: right;
+  }
+  
+  .login {
+    text-align: center;
