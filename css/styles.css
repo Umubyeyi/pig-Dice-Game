@@ -26,3 +26,13 @@
   
   .login {
     text-align: center;
+  }
+  
+  .jumbotron {
+    margin:0 auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    width: 400px;
+    display: block;
+  }
