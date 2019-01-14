@@ -22,6 +22,7 @@
   #help {
     border-radius: 10px;
     float: right;
+    
   }
   
   .login {
@@ -44,6 +45,7 @@
   #start {
     display: block;
     margin:0 auto;
+    background-color:blue
   }
   .pig-game {
     display: none;
@@ -79,6 +81,7 @@
   #restart {
     display: block;
     margin:0 auto;
+    background-color:green
   }
   
   .copyright {
@@ -104,4 +107,16 @@
   .jumbotron>p{
     font-family: 'Times New Roman', Times, serif;
   }
+  .jumbotron>#help{
+    
+    background-color:orange
+  }
+  #roll{
+background-color:red
+  }
+  #hold{
+background-color:yellow
+  }
+    
+  
   
